@@ -35,16 +35,18 @@
   # association
   - has_many :tweets
   - has_many :comments
+
   # tweets
 
   | column             | type             | option             |
   |--------------------|------------------|--------------------|
   | title              | string           | null:false         |
-  | text               | text             | unique:true        |
+  | text               | text             | null:false       |
   
   # association
   - belongs_to :user
   - has_many :comments
+
   # comments
 
   | column             | type             | option             |
@@ -54,6 +56,6 @@
   # association
   - belongs_to :user
   - belongs_to :tweets
-  
+
 ## ローカルでの動作方法
 
