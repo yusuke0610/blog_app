@@ -41,7 +41,8 @@
   | column             | type             | option             |
   |--------------------|------------------|--------------------|
   | title              | string           | null:false         |
-  | text               | text             | null:false       |
+  | text               | text             | null:false         |
+  | user               | references       | foreign_key:true   |
   
   # association
   - belongs_to :user
