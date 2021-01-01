@@ -35,25 +35,30 @@
   # association
   - has_many :tweets
   - has_many :comments
+
   # tweets
 
   | column             | type             | option             |
   |--------------------|------------------|--------------------|
   | title              | string           | null:false         |
-  | text               | text             | unique:true        |
+  | text               | text             | null:false         |
+  | user               | references       | foreign_key:true   |
   
   # association
   - belongs_to :user
   - has_many :comments
+
   # comments
 
   | column             | type             | option             |
   |--------------------|------------------|--------------------|
   | comment            | text             | null:false         | 
+  | user               | references       | foreign_key:true   |
+  | tweet              | references       | foreign_key:true   |
 
   # association
   - belongs_to :user
-  - belongs_to :tweets
-  
+  - belongs_to :tweet
+
 ## ローカルでの動作方法
 
