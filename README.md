@@ -53,10 +53,12 @@
   | column             | type             | option             |
   |--------------------|------------------|--------------------|
   | comment            | text             | null:false         | 
+  | user               | references       | foreign_key:true   |
+  | tweet              | references       | foreign_key:true   |
 
   # association
   - belongs_to :user
-  - belongs_to :tweets
+  - belongs_to :tweet
 
 ## ローカルでの動作方法
 
